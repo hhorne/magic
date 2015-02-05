@@ -35,14 +35,13 @@ namespace Magic
 				new AiPlayer { Name = "AI Cheater BS" }
 			});
 
-			while (game.Players.Count(p => p.Lost) == 0)
+			foreach(var gs in game.Play())
 			{
-				foreach (var player in game.Players)
-				{
-					player.TakeTurn(game);
-					game.TurnNumber++;
-				}
+				game.TakeTurn(gs.ActivePlayer);
 			}
+
+			Console.WriteLine("GAME OVER");
+			Console.WriteLine("Thanks for playing");
 		}
 
 		private void PrintGreeting()

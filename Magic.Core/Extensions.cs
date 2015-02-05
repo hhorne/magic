@@ -16,4 +16,13 @@ public static class Extensions
 	{
 		return !source.Any();
 	}
+
+	public static IEnumerable<T> CycleForever<T>(this IEnumerable<T> loop)
+	{
+		while(true)
+		{
+			foreach (var ret in loop)
+				yield return ret;
+		}
+	}
 }
