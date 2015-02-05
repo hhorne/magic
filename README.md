@@ -6,6 +6,8 @@ A fun side project using a well defined yet varied and in-depth system.
 ##Spec
 * Primary Source:
   * http://media.wizards.com/images/magic/tcg/resources/rules/MagicCompRules_20140601.pdf
+* Structure of a Turn:
+  * http://www.essentialmagic.com/rules/turnstructure.asp
 * Various Sources:
   * http://en.wikipedia.org/wiki/Magic:_The_Gathering_rules
   * http://magic.wizards.com/en/game-info/gameplay/rules-and-formats
