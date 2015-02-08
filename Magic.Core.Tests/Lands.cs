@@ -21,13 +21,13 @@ namespace Magic.Core.Tests
 				abilityDescription,
 				(controller, permanent) => {
 					permanent.Tap();
-					controller.ManaPool.Add(ManaColors.Blue);
+					controller.ManaPool.Mana.Add(ManaColors.Blue);
 				}
 			);
 
 			island.ActivateAbility(abilityDescription, player);
 
-			var blueMana = player.ManaPool.Count(p => p == ManaColors.Blue);
+			var blueMana = player.ManaPool.Mana.Count(p => p == ManaColors.Blue);
 			Assert.Equal(1, blueMana);
 		}
 	}

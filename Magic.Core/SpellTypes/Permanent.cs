@@ -18,7 +18,7 @@ namespace Magic.Core.SpellTypes
 			this.Abilities = new Dictionary<string, Action<Player, Permanent>>();
 		}
 
-		public void Tap()
+		public virtual void Tap()
 		{
 			this.Tapped = true;
 		}

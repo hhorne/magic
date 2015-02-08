@@ -8,11 +8,10 @@ using Magic.Core.SpellTypes;
 
 namespace Magic.Core
 {
-	public abstract class Spell : ISpell
+	public abstract class Spell : ICard
 	{
 		public Guid ID { get; private set; }
 		public string Name { get; set; }
-		private readonly Type BaseType;
 
 		public Spell()
 		{

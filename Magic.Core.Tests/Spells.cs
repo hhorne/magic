@@ -13,15 +13,15 @@ namespace Magic.Core.Tests
 		[Fact]
 		public void ArtifactIsAPermanent()
 		{
-			ISpell spell = new Artifact();
-			Assert.True(spell.IsPermanent);
+			ICard card = new Artifact();
+			Assert.True(card.IsPermanent);
 		}
 
 		[Fact]
 		public void InstantIsNotAPermanent()
 		{
-			var spell = new Instant();
-			Assert.False(spell.IsPermanent);
+			ICard card = new Instant();
+			Assert.False(card.IsPermanent);
 		}
 	}
 }

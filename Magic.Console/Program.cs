@@ -30,7 +30,7 @@ namespace Magic
 		private void Start()
 		{
 			var game = new Game();
-			game.Players.AddRange(new IPlayer[]{
+			game.Players.AddRange(new Player[]{
 				new ConsolePlayer { Name = "Cool Dude" },
 				new AiPlayer { Name = "AI Cheater BS" }
 			});
