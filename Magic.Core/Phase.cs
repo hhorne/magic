@@ -20,6 +20,11 @@ namespace Magic.Core
 	{
 		public string Name { get; set; }
 		public Action<Entity> Action { get; set; }
+
+		public Step()
+		{
+			Action = entity => { };
+		}
 	}
 
 	public class Phases

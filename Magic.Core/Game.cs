@@ -18,13 +18,7 @@ namespace Magic.Core
 
 		public void TakeTurn(Player player)
 		{
-			foreach (var phase in phases.GetPhases())
-			{
-				foreach (var step in phase.Steps)
-				{
-					step.Action(player);
-				}
-			}
+			phases.GetPhases().ForEach(phase => phase.Execute(player));
 		}
 
 		public IEnumerable<GameState> Play()
