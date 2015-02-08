@@ -10,7 +10,19 @@ namespace Magic.Core.Tests
 {
 	public class Lands
 	{
-		private readonly Player player = new Player { Name = "Cool dude" };
+		private readonly Player player;
+
+		public Lands()
+		{
+			this.player = new Player
+			(
+				"Cool dude",
+				new Library(),
+				new Hand(),
+				new Board(),
+				new Graveyard()
+			);
+		}
 
 		[Fact]
 		public void IslanAddsBToManaPool()

@@ -31,8 +31,18 @@ namespace Magic
 		{
 			var game = new Game();
 			game.Players.AddRange(new Player[]{
-				new ConsolePlayer { Name = "Cool Dude" },
-				new AiPlayer { Name = "AI Cheater BS" }
+				new ConsolePlayer("Cool Dude",
+					new Library(),
+					new Hand(),
+					new Board(),
+					new Graveyard()
+				),
+				new AiPlayer("AI Cheater BS",
+					new Library(),
+					new Hand(),
+					new Board(),
+					new Graveyard()
+				)
 			});
 
 			foreach(var gs in game.Play())

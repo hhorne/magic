@@ -8,12 +8,11 @@ using Magic.Core.SpellTypes;
 
 namespace Magic.Core
 {
-	public class Player : Component
+	public class Player : Entity
 	{
 		private Guid id = Guid.NewGuid();
 		private bool lost = false;
 
-		public string Name { get; set; }
 		public int LifeTotal { get; set; }
 		public Game Game { get; set; }
 		public Board Board { get; set; }
@@ -37,7 +36,7 @@ namespace Magic.Core
 			}
 		}
 
-		public Player()
+		public Player(string name, params Component[] components) : base(name, components)
 		{
 			this.LifeTotal = 20;
 		}
