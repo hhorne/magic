@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Magic.Core;
+using Magic.Core.Components.Player;
 
 namespace Magic
 {

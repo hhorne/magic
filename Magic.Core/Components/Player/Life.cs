@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Magic.Core.CES;
+﻿using Magic.Core.CES;
 
-namespace Magic.Core
+namespace Magic.Core.Components.Player
 {
 	public class Life : Component
 	{

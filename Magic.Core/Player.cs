@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Magic.Core.CES;
+using Magic.Core.Components.Player;
 using Magic.Core.SpellTypes;
 
 namespace Magic.Core

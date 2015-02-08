@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Magic.Core.CES;
 
-namespace Magic.Core
+namespace Magic.Core.Components.Player
 {
 	public class Board : Component
 	{

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using Magic.Core.CES;
 
 namespace Magic.Core

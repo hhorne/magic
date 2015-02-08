@@ -37,19 +37,19 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Board.cs" />
     <Compile Include="CES\Component.cs" />
     <Compile Include="CES\Entity.cs" />
     <Compile Include="CES\System.cs" />
+    <Compile Include="Components\Player\Board.cs" />
+    <Compile Include="Components\Player\Graveyard.cs" />
+    <Compile Include="Components\Player\Hand.cs" />
+    <Compile Include="Components\Player\Library.cs" />
+    <Compile Include="Components\Player\Life.cs" />
+    <Compile Include="Components\Player\ManaPool.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Game.cs" />
-    <Compile Include="Graveyard.cs" />
-    <Compile Include="Hand.cs" />
     <Compile Include="ICard.cs" />
-    <Compile Include="Library.cs" />
-    <Compile Include="Life.cs" />
     <Compile Include="ManaColors.cs" />
-    <Compile Include="ManaPool.cs" />
     <Compile Include="Phase.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Spell.cs" />
