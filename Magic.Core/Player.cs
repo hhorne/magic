@@ -13,20 +13,14 @@ namespace Magic.Core
 		private Guid id = Guid.NewGuid();
 		private bool lost = false;
 
-		public int LifeTotal { get; set; }
 		public Game Game { get; set; }
-		public Board Board { get; set; }
-		public Hand Hand { get; set; }
-		public Library Library { get; set; }
-		public Graveyard Graveyard { get; set; }
-		public ManaPool ManaPool { get; set; }
 
 		public bool Lost
 		{
 			get
 			{
-				var notDead = this.LifeTotal > 0;
-				var cardsLeft = this.Library.Cards.Any();
+				var notDead = this.GetComponent<Life>().Total > 0;
+				var cardsLeft = this.GetComponent<Library>().Cards.Any();
 
 				return lost && notDead && cardsLeft;
 			}
@@ -38,7 +32,6 @@ namespace Magic.Core
 
 		public Player(string name, params Component[] components) : base(name, components)
 		{
-			this.LifeTotal = 20;
 		}
 	}
 }

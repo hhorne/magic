@@ -47,6 +47,7 @@
     <Compile Include="Hand.cs" />
     <Compile Include="ICard.cs" />
     <Compile Include="Library.cs" />
+    <Compile Include="Life.cs" />
     <Compile Include="ManaColors.cs" />
     <Compile Include="ManaPool.cs" />
     <Compile Include="Phase.cs" />

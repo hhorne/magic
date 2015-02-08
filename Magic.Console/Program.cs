@@ -35,13 +35,17 @@ namespace Magic
 					new Library(),
 					new Hand(),
 					new Board(),
-					new Graveyard()
+					new Graveyard(),
+					new ManaPool(),
+					new Life()
 				),
 				new AiPlayer("AI Cheater BS",
 					new Library(),
 					new Hand(),
 					new Board(),
-					new Graveyard()
+					new Graveyard(),
+					new ManaPool(),
+					new Life()
 				)
 			});
 

@@ -20,7 +20,9 @@ namespace Magic.Core.Tests
 				new Library(),
 				new Hand(),
 				new Board(),
-				new Graveyard()
+				new Graveyard(),
+				new ManaPool(),
+				new Life()
 			);
 		}
 
@@ -33,13 +35,13 @@ namespace Magic.Core.Tests
 				abilityDescription,
 				(controller, permanent) => {
 					permanent.Tap();
-					controller.ManaPool.Mana.Add(ManaColors.Blue);
+					controller.GetComponent<ManaPool>().Mana.Add(ManaColors.Blue);
 				}
 			);
 
 			island.ActivateAbility(abilityDescription, player);
 
-			var blueMana = player.ManaPool.Mana.Count(p => p == ManaColors.Blue);
+			var blueMana = player.GetComponent<ManaPool>().Mana.Count(p => p == ManaColors.Blue);
 			Assert.Equal(1, blueMana);
 		}
 	}
