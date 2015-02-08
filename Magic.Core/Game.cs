@@ -10,7 +10,7 @@ namespace Magic.Core
 	public class Game
 	{
 		public readonly List<Player> Players = new List<Player>();
-		private readonly Phases phases = new Phases();
+		private readonly Turn turn = new Turn();
 
 		public Game()
 		{
@@ -18,7 +18,7 @@ namespace Magic.Core
 
 		public void TakeTurn(Player player)
 		{
-			phases.GetPhases().ForEach(phase => phase.Execute(player));
+			turn.GetPhases().ForEach(phase => phase.Execute(player));
 		}
 
 		public IEnumerable<GameState> Play()

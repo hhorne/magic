@@ -61,6 +61,7 @@
     <Compile Include="SpellTypes\Land.cs" />
     <Compile Include="SpellTypes\Permanent.cs" />
     <Compile Include="SpellTypes\Sorcery.cs" />
+    <Compile Include="Turn.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
