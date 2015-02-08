@@ -42,8 +42,14 @@ namespace Magic.Core
 		{
 		}
 
-		public Player(string name, params Component[] components) : base(name, components)
+		public Player(string name, params Component[] components) 
+			: base(name, components)
 		{
+		}
+
+		public virtual void EnterPhase(Phase phase)
+		{
+			phase.Execute(this);
 		}
 	}
 }

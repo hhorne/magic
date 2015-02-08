@@ -52,10 +52,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Lands.cs" />
+    <Compile Include="Players.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Spells.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Magic.Console\Magic.Console.csproj">
+      <Project>{b9fdb292-6b6c-4389-a1c2-b80bd018a10c}</Project>
+      <Name>Magic.Console</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Magic.Core\Magic.Core.csproj">
       <Project>{45b455c7-847f-473b-b49e-670b2756c74b}</Project>
       <Name>Magic.Core</Name>

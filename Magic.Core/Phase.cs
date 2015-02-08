@@ -9,6 +9,11 @@ namespace Magic.Core
 		public string Name { get; set; }
 		public IEnumerable<Step> Steps { get; set; }
 
+		public Phase()
+		{
+			this.Steps = new Step[0];
+		}
+
 		public void Execute(Entity entity)
 		{
 			this.Steps.ForEach(step => this.RunSystem(entity, step.Action));
