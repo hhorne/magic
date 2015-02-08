@@ -17,7 +17,7 @@ namespace Magic
 
 		private void LogMessage(Game game, string msg)
 		{
-			Console.WriteLine("Turn #{0} - Player: {1} {2}", game.TurnNumber, this.Name, msg);
+			Console.WriteLine("Player: {1} {2}", this.Name, msg);
 		}
 	}
 }

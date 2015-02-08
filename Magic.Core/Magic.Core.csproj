@@ -40,6 +40,7 @@
     <Compile Include="Board.cs" />
     <Compile Include="CES\Component.cs" />
     <Compile Include="CES\Entity.cs" />
+    <Compile Include="CES\System.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="Graveyard.cs" />

@@ -9,18 +9,22 @@ namespace Magic.Core
 {
 	public class Game
 	{
-		public int TurnNumber { get; private set; }
 		public readonly List<Player> Players = new List<Player>();
+		private readonly Phases phases = new Phases();
 
 		public Game()
 		{
-			TurnNumber = 1;
 		}
 
 		public void TakeTurn(Player player)
 		{
-			// so the game can know about the various effects of other's ICards and apply them appropriately
-			TurnNumber++;
+			foreach (var phase in phases.GetPhases())
+			{
+				foreach (var step in phase.Steps)
+				{
+					step.Action(player);
+				}
+			}
 		}
 
 		public IEnumerable<GameState> Play()

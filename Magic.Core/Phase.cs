@@ -1,18 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Magic.Core.CES;
 
 namespace Magic.Core
 {
-	public class Phase
+	public class Phase : CES.System
 	{
 		public string Name { get; set; }
 		public IEnumerable<Step> Steps { get; set; }
+
+		public void Execute(Entity entity)
+		{
+			this.Steps.ForEach(step => this.RunSystem(entity, step.Action));
+		}
 	}
 
 	public class Step
 	{
 		public string Name { get; set; }
+		public Action<Entity> Action { get; set; }
 	}
 
 	public class Phases
