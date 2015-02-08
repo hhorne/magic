@@ -7,22 +7,32 @@ namespace Magic.Core.CES
 	public class Entity
 	{
 		public string Name { get; private set; }
-		List<Component> Components;
+		private readonly List<Component> components;
 
 		public Entity(string name, params Component[] components)
 		{
 			Name = name;
-			Components = new List<Component>(components);
+			this.components = new List<Component>(components);
+		}
+
+		protected void AddComponent(Component component)
+		{
+			components.Add(component);
+		}
+
+		protected void AddComponents(params Component[] components)
+		{
+			this.components.AddRange(components);
 		}
 
 		public T GetComponent<T>()
 		{
-			return Components.OfType<T>().FirstOrDefault();
+			return components.OfType<T>().FirstOrDefault();
 		}
 
 		public IEnumerable<T> GetComponents<T>()
 		{
-			return Components.OfType<T>();
+			return components.OfType<T>();
 		}
 	}
 }

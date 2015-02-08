@@ -31,6 +31,17 @@ namespace Magic.Core
 			}
 		}
 
+		public Player(string name)
+			: base(name,
+				new Library(),
+				new Hand(),
+				new Board(),
+				new Graveyard(),
+				new ManaPool(),
+				new Life())
+		{
+		}
+
 		public Player(string name, params Component[] components) : base(name, components)
 		{
 		}

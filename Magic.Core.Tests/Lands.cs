@@ -15,16 +15,7 @@ namespace Magic.Core.Tests
 
 		public Lands()
 		{
-			this.player = new Player
-			(
-				"Cool dude",
-				new Library(),
-				new Hand(),
-				new Board(),
-				new Graveyard(),
-				new ManaPool(),
-				new Life()
-			);
+			this.player = new Player("Cool dude");
 		}
 
 		[Fact]

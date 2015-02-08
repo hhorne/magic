@@ -8,14 +8,18 @@ using Magic.Core.Components.Player;
 
 namespace Magic
 {
-	public class MagicGame
+	public class ConsoleGame
 	{
 		readonly Dictionary<ConsoleKey, Action> menuOptions = new Dictionary<ConsoleKey, Action>();
 
+		public ConsoleGame()
+		{
+			this.SetupMenuOptions();
+		}
+
 		static void Main(string[] args)
 		{
-			var game = new MagicGame();
-			game.SetupMenuOptions();
+			var game = new ConsoleGame();
 			game.PrintGreeting();
 
 			var selection = game.PromptUserToPlay();
@@ -31,23 +35,9 @@ namespace Magic
 		private void Start()
 		{
 			var game = new Game();
-			game.Players.AddRange(new Player[]{
-				new ConsolePlayer("Cool Dude",
-					new Library(),
-					new Hand(),
-					new Board(),
-					new Graveyard(),
-					new ManaPool(),
-					new Life()
-				),
-				new AiPlayer("AI Cheater BS",
-					new Library(),
-					new Hand(),
-					new Board(),
-					new Graveyard(),
-					new ManaPool(),
-					new Life()
-				)
+			game.Players.AddRange(new []{
+				new ConsolePlayer("Cool Dude"),
+				new AiPlayer("AI Cheater BS")
 			});
 
 			foreach(var gs in game.Play())
