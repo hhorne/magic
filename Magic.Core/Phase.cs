@@ -4,7 +4,7 @@ using Magic.Core.CES;
 
 namespace Magic.Core
 {
-	public class Phase : CES.System
+	public class Phase
 	{
 		public string Name { get; set; }
 		public IEnumerable<Step> Steps { get; set; }
@@ -12,11 +12,6 @@ namespace Magic.Core
 		public Phase()
 		{
 			this.Steps = new Step[0];
-		}
-
-		public void Execute(Entity entity)
-		{
-			this.Steps.ForEach(step => this.RunSystem(entity, step.Action));
 		}
 	}
 

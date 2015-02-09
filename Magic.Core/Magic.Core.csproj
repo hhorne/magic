@@ -63,6 +63,11 @@
     <Compile Include="SpellTypes\Permanent.cs" />
     <Compile Include="SpellTypes\Sorcery.cs" />
     <Compile Include="Turn.cs" />
+    <Compile Include="TurnPhases\Beginning.cs" />
+    <Compile Include="TurnPhases\Combat.cs" />
+    <Compile Include="TurnPhases\Ending.cs" />
+    <Compile Include="TurnPhases\MainPostCombat.cs" />
+    <Compile Include="TurnPhases\MainPreCombat.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

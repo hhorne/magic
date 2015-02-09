@@ -46,10 +46,5 @@ namespace Magic.Core
 			: base(name, components)
 		{
 		}
-
-		public virtual void EnterPhase(Phase phase)
-		{
-			phase.Execute(this);
-		}
 	}
 }

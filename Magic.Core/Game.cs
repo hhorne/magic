@@ -15,7 +15,6 @@ namespace Magic.Core
 
 		public void TakeTurn(Player player)
 		{
-			turn.GetPhases().ForEach(player.EnterPhase);
 		}
 
 		public IEnumerable<GameState> Play()
